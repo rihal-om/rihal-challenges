@@ -1,5 +1,5 @@
-# Job Requirement
-We are looking for data engineers that are resourceful, adaptable, curious, tech savvy, and eager to learn and face challenges of data preparation projects.
+# Job Requirement (Data Engineering)
+We are looking for Omani gradautes that are resourceful, adaptable, curious, tech savvy, and eager to learn and face challenges of data preparation projects.
 
 # Ok I'm interested, what do I need to do?
 1.	Develop a software program that will solve the task mentioned below.

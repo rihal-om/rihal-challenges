@@ -1,9 +1,7 @@
-# Introduction
-Rihal is an Omani established company that specializes in Data Management and Process Automation. Established in 2018 Rihal quickly became synonymous with accomplishment and quality delivery. Projects are accomplished using in-house built IP combined with international recognized IP. Rihal focuses mostly on Engineering data management solutions, but also performed projects for Shared Services departments.
 # Job Requirement
-We are looking for software engineers and developers that are resourceful, adaptable, curious, tech savvy, and eager to learn and face challenges to work on the development of in-house applications and directly working on projects.
+We are looking for software engineers and developers that are resourceful, adaptable, curious, tech savvy, and eager to learn and face challenges to work on the development of in-house applications and directly working on client projects.
 
-# Challenge
+# Ok I'm interested, what do I need to do?
 Please build a simple web app using Dotnet Blazor Server-Side with CRUD for the following tables:
 ![image](https://user-images.githubusercontent.com/71645462/139626325-c8ae8e6e-4013-4048-9147-b72f38ef318e.png)
 

@@ -3,3 +3,8 @@ Rihal is an Omani established company that specializes in Data Management and Pr
 
 # rihal-challenges
 This repository is used to publish and revision Rihal's public challenges.
+
+# Challenges
+Data Engineering https://github.com/rihal-om/rihal-challenges/tree/main/data_engineering
+
+DotNet (Blazor) https://github.com/rihal-om/rihal-challenges/tree/main/dotnet

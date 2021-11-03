@@ -19,8 +19,6 @@ Please build a simple web app using Dotnet Blazor Server-Side with CRUD for the 
 
 •	Data must be stored in a SQLITE database (automatically created on app start-up)
 
-•	Build app using Visual Studio 2019
-
 •	Use good practices in coding as your code quality will be reviewed by a senior developer
 
 # Bonus Requirements

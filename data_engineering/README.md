@@ -11,11 +11,16 @@ The solution needs to do the following steps:
 1. Read the image below
 2. OCR the text
 3. Extract the following as outputs
-  a.	Find all dates. Standardize the output to this format YYYY-MM-DD
-  b.	Room Names
-  c.	Room Rates
-  d.	Individual Names. Standardize the output to this format “Firstname Lastname”
-  e.	All emails
+
+    i.	Find all dates. Standardize the output to this format YYYY-MM-DD
+    
+    ii.	Room Names
+    
+    iii.	Room Rates
+    
+    iv.	Individual Names. Standardize the output to this format "Firstname Lastname"
+    
+    v.	All emails
 
 ![image](https://user-images.githubusercontent.com/71645462/140041751-b7eaabfa-2da0-4208-bda2-75c9db41e862.png)
 

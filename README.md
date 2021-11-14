@@ -8,3 +8,5 @@ We're after individuals who are passionate about solving highly technical proble
 Data Engineers (Fresh Graduates) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/data_engineering
 
 Full-Stack .Net Developers (Fresh Graduates and Experienced) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/dotnet
+
+Full-Stack Web Developers (Fresh Graduates and Experienced) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/devops

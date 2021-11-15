@@ -5,7 +5,7 @@ Rihal is an Omani established company that specializes in Data Management and Pr
 We're after individuals who are passionate about solving highly technical problems and developing software solutions for high profile projects. Currently open opportunities shown below.
 
 # Opportunities
-Data Engineers (Fresh Graduates) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/data_engineering
+Data Engineers (Omani Fresh Graduates) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/data_engineering
 
 Full-Stack .Net Developers (Fresh Graduates and Experienced) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/dotnet
 

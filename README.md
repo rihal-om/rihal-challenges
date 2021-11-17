@@ -10,3 +10,5 @@ Data Engineers (Omani Fresh Graduates) **Open** https://github.com/rihal-om/riha
 Full-Stack .Net Developers (Fresh Graduates and Experienced) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/dotnet
 
 Full-Stack Web Developers (Fresh Graduates and Experienced) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/devops
+
+RPA Developer (Fresh Graduates and Experienced) **Open** https://www.careers-page.com/rihal-2/job/88746R

@@ -13,7 +13,7 @@ Please build a simple web app using Dotnet Blazor Server-Side with CRUD for the 
 •	Average age of students
 
 # Mandatory Requirements
-•	App must be built using .Net 5.0 Blazor Server-Side and written in C#
+•	App must be built using .Net 6 Blazor Server-Side and written in C#
 
 •	Data access must be built using Entity Framework Core
 

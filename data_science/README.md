@@ -1,6 +1,9 @@
+# Job Requirements (Data Scientists)
+We are looking for data scientists and machine learning engineers who enjoy analyzing data, exercise critical thinking and know how to link between business requirements and the corresponding technical requirements when building a machine learning project. The ideal candidate will already have a programming foundation establised by learning topics such as data structures, algorithms, and have already worked on programming projects, whether software or data science projects. 
+
 # Rihal Data Science Challenge
 
-### Overview
+## Overview
 You are a data scientist given datasets collected from used cars advertisements. Your task is to build and evaluate machine learning algorithms that will predict the price of used cars. 
 
 The datasets are divided into training and testing sets. Your models must train on the training dataset, and use the testing dataset for testing and evaluation purposes **only**.
@@ -12,7 +15,7 @@ You are allowed to use any technique in exploring, loading, and transforming the
 Please make sure you document your notebook thoroughly. When explaining your choice of methods, please use markdown cells to write your explanations in the notebook, and when commenting on code use code comments instead. 
 
 
-### Data 
+## Data 
 1. manufacturer_name: the name of the car manufacturer
 2. transmission: type of car transmission
 3. color: the car's body color

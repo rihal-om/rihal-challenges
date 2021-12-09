@@ -12,7 +12,11 @@ Compare the test dataset's price USD with your predictions using **Mean Absolute
 
 You are allowed to use any technique in exploring, loading, and transforming the data. Additionally, feel free to engineer more features from the given data. Build any model, and use any parameters. In summary, you are free to use any method and technique in getting the best model possible with the lowest error rate.
 
+We encourage you to explore as many methods and techniques as possible in exploring the data, detecting analyzing the trends and patters you find, engineering more features, transforming the data, and ofcourse, creating, training, testing and evaluating models. Keep in mind, that code readability and notebook organization is very important as well. 
+
 Please make sure you document your notebook thoroughly. When explaining your choice of methods, please use markdown cells to write your explanations in the notebook, and when commenting on code use code comments instead. 
+
+Goodluck!
 
 
 ## Data 

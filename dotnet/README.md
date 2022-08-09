@@ -23,6 +23,8 @@ Please build a simple web app with CRUD for the following tables:
 
 •	Data must be stored in a SQLITE database (automatically created on app start-up)
 
+•	Add student photo attachment per student
+
 •	Use good practices in coding and UI/UX as your code quality will be reviewed by a senior developer
 
 •	Host the website and share URL with submission

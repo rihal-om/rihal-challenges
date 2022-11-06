@@ -11,6 +11,8 @@ Please build a simple web app with CRUD for the following tables:
 
 •	Students table and form
 
+•	Countries table and form
+
 # Statistics to display on website
 •	Count of students per class
 

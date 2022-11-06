@@ -30,7 +30,7 @@ Please build a simple web app with CRUD for the following tables:
 # Bonus Requirements
 •	Use a 3rd party UI library (Antblazor, Mudblazor, Radzen, or others)
 
-•	More visuals/stats
+•	Graphical visuals/stats
 
 •	Add dark/light mode toggle
 

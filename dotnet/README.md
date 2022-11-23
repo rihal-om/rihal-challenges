@@ -23,7 +23,7 @@ Please build a simple web app with CRUD for the following tables:
 # Mandatory Requirements
 •	App must be built using the latest version of .Net Blazor (Server-Side or WASM)
 
-•	Data must be stored in a SQLITE or other file based database, not hosted (automatically created on app start-up)
+•	Data must be stored in a SQLITE or other file/memory based database, not hosted (automatically created on app start-up)
 
 •	Upload code to GitHub for submission
 

@@ -6,14 +6,14 @@ Please build a simple web app with CRUD for the following tables:
 
 ![image](https://user-images.githubusercontent.com/71645462/139626325-c8ae8e6e-4013-4048-9147-b72f38ef318e.png)
 
-# Site Componenets (Minimum)
+# Site Componenets
 •	Classes table and form
 
 •	Students table and form
 
 •	Countries table and form
 
-# Statistics to display on website
+# Statistics to display on home page
 •	Count of students per class
 
 •	Count of students per country
@@ -28,7 +28,7 @@ Please build a simple web app with CRUD for the following tables:
 •	Upload code to GitHub for submission
 
 # Bonus Requirements
-•	Use a 3rd party UI library (Antblazor, Mudblazor, Radzen, or others)
+•	Use a 3rd party UI library (Mudblazor, Antblazor, Radzen, or others)
 
 •	Graphical visuals/stats
 

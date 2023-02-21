@@ -40,5 +40,7 @@ Please build a simple web app with CRUD for the following tables:
 
 •	Automatically generate CreatedDate and ModifiedDate properties for all entities
 
+•	Run/Host the application and add URL to hosted version in submission
+
 # Submission
 Please send a link to your GitHub repo for this solution to interviewer

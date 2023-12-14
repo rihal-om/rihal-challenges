@@ -52,13 +52,15 @@ namespace RihalChallengeApp.Services
                 await _context.SaveChangesAsync();
             }
         }
-          public async Task<Dictionary<string, int>> GetStudentCountPerClassAsync()
+        public async Task<Dictionary<string, int>> GetStudentCountPerClassAsync()
         {
             return await _context.Students
+                .Include(s => s.Class)
                 .GroupBy(s => s.Class.ClassName)
-                .Select(g => new { ClassName = g.Key, Count = g.Count() })
+                .Select(g => new { ClassName = g.Key ?? "Unknown", Count = g.Count() })
                 .ToDictionaryAsync(g => g.ClassName, g => g.Count);
         }
+
 
         public async Task<Dictionary<string, int>> GetStudentCountPerCountryAsync()
         {
@@ -69,16 +71,16 @@ namespace RihalChallengeApp.Services
                 .ToDictionaryAsync(g => g.CountryName, g => g.Count);
         }
 
-public async Task<double> GetAverageAgeOfStudentsAsync()
-{
-    var today = DateTime.UtcNow;
-    var students = await _context.Students.ToListAsync();
-    var averageAge = students
-        .Where(s => s.DateOfBirth.HasValue)
-        .Average(s => (today - s.DateOfBirth.Value).TotalDays / 365.25);
+        public async Task<double> GetAverageAgeOfStudentsAsync()
+        {
+            var today = DateTime.UtcNow;
+            var students = await _context.Students.ToListAsync();
+            var averageAge = students
+                .Where(s => s.DateOfBirth.HasValue)
+                .Average(s => (today - s.DateOfBirth.Value).TotalDays / 365.25);
 
-    return averageAge;
-}
+            return averageAge;
+        }
         
     }
 }

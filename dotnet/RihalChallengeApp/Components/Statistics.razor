@@ -2,6 +2,7 @@
 @using RihalChallengeApp.Services
 @using MudBlazor
 @using MudBlazor.Charts
+@using Microsoft.Extensions.Logging
 
 <h3>Statistics</h3>
 
@@ -9,7 +10,14 @@
 {
     <MudPaper Elevation="3" Class="pa-4 ma-4">
         <h4>Students per Class</h4>
-        <MudChart ChartType="ChartType.Bar" InputData="@studentsPerClassData" InputLabels="@studentsPerClassLabels" />
+        @if (studentsPerClassData.All(d => !double.IsNaN(d)))
+        {
+            <MudChart ChartType="ChartType.Pie" InputData="@studentsPerClassData" InputLabels="@studentsPerClassLabels" />
+        }
+        else
+        {
+            <p>Invalid data for Students per Class chart.</p>
+        }
     </MudPaper>
 
     <MudPaper Elevation="3" Class="pa-4 ma-4">
@@ -20,7 +28,6 @@
     <MudPaper Elevation="3" Class="pa-4 ma-4">
         <h4>Average Age of Students</h4>
         <div>Average Age: @averageAge.Value.ToString("0.00") years</div>
-        <!-- You can add a graphical representation for the average age if needed -->
     </MudPaper>
 }
 else
@@ -29,6 +36,9 @@ else
 }
 
 @code {
+    [Inject]
+    private ILogger<Statistics> Logger { get; set; }
+
     private Dictionary<string, int> studentCountPerClass;
     private Dictionary<string, int> studentCountPerCountry;
     private double? averageAge;
@@ -39,14 +49,34 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        studentCountPerClass = await StudentService.GetStudentCountPerClassAsync();
-        studentsPerClassData = studentCountPerClass.Values.Select(v => (double)v).ToArray();
-        studentsPerClassLabels = studentCountPerClass.Keys.ToArray();
+        try
+        {
+            studentCountPerClass = await StudentService.GetStudentCountPerClassAsync();
+            studentsPerClassData = studentCountPerClass.Values.Select(v => (double)v).ToArray();
+            studentsPerClassLabels = studentCountPerClass.Keys.ToArray();
 
-        studentCountPerCountry = await StudentService.GetStudentCountPerCountryAsync();
-        studentsPerCountryData = studentCountPerCountry.Values.Select(v => (double)v).ToArray();
-        studentsPerCountryLabels = studentCountPerCountry.Keys.ToArray();
+            Logger.LogInformation("Students per Class Data: {Data}", studentsPerClassData);
+            Logger.LogInformation("Students per Class Labels: {Labels}", studentsPerClassLabels);
 
-        averageAge = await StudentService.GetAverageAgeOfStudentsAsync();
+            // Additional logging to check for NaN values
+            if (studentsPerClassData.Any(d => double.IsNaN(d)))
+            {
+                Logger.LogWarning("NaN values detected in Students per Class Data.");
+            }
+
+            studentCountPerCountry = await StudentService.GetStudentCountPerCountryAsync();
+            studentsPerCountryData = studentCountPerCountry.Values.Select(v => (double)v).ToArray();
+            studentsPerCountryLabels = studentCountPerCountry.Keys.ToArray();
+
+            Logger.LogInformation("Students per Country Data: {Data}", studentsPerCountryData);
+            Logger.LogInformation("Students per Country Labels: {Labels}", studentsPerCountryLabels);
+
+            averageAge = await StudentService.GetAverageAgeOfStudentsAsync();
+            Logger.LogInformation("Average Age: {AverageAge}", averageAge);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Error occurred while initializing statistics.");
+        }
     }
 }

@@ -1,0 +1,96 @@
+@using RihalChallengeApp.Models
+@using RihalChallengeApp.Services
+@inject StudentService StudentService
+@inject CountryService CountryService
+@inject ClassService ClassService
+
+<EditForm Model="@student" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <InputText id="name" class="form-control" @bind-Value="student.Name" />
+        <ValidationMessage For="@(() => student.Name)" />
+    </div>
+
+    <div class="form-group">
+        <label for="dateOfBirth">Date of Birth</label>
+        <InputDate id="dateOfBirth" class="form-control" @bind-Value="student.DateOfBirth" />
+        <ValidationMessage For="@(() => student.DateOfBirth)" />
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country</label>
+        <InputSelect id="country" @bind-Value="student.CountryId" class="form-control">
+            @foreach (var country in countries)
+            {
+                <option value="@country.Id">@country.Name</option>
+            }
+        </InputSelect>
+    </div>
+
+    <div class="form-group">
+        <label for="class">Class</label>
+        <InputSelect id="class" @bind-Value="student.ClassId" class="form-control">
+            @foreach (var classEntity in classes)
+            {
+                <option value="@classEntity.Id">@classEntity.ClassName</option>
+            }
+        </InputSelect>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    @if (student.Id != 0)
+    {
+        <button class="btn btn-danger" @onclick="DeleteStudent">Delete</button>
+    }
+</EditForm>
+
+@if (submitSuccess)
+{
+    <div class="alert alert-success" role="alert">
+        Submit successful!
+    </div>
+}
+
+@code {
+    [Parameter] public Student student { get; set; } = new Student();
+    [Parameter] public EventCallback OnSuccess { get; set; }
+
+    private List<Country> countries;
+    private List<Class> classes;
+
+    protected override async Task OnInitializedAsync()
+    {
+        countries = await CountryService.GetAllCountriesAsync();
+        classes = await ClassService.GetAllClassesAsync();
+         Console.WriteLine($"Countries Count: {countries.Count}");
+    Console.WriteLine($"Classes Count: {classes.Count}");
+    }
+
+    private bool submitSuccess = false;
+
+    private async Task HandleSubmit()
+    {
+        if (student.Id == 0)
+        {
+            await StudentService.AddStudent(student);
+        }
+        else
+        {
+            await StudentService.UpdateStudent(student);
+        }
+
+        submitSuccess = true;
+        await OnSuccess.InvokeAsync(null);
+    }
+
+    private async Task DeleteStudent()
+    {
+        await StudentService.DeleteStudent(student.Id);
+        submitSuccess = true; // Handle post-delete actions
+        await OnSuccess.InvokeAsync(null);
+    }
+}

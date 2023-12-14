@@ -1,0 +1,86 @@
+@using RihalChallengeApp.Models
+@using RihalChallengeApp.Services
+@page "/students"
+@inject StudentService StudentService
+@inject ClassService ClassService
+@inject CountryService CountryService
+
+<h3>Students</h3>
+
+@if (students == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Class</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in students)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@(student.DateOfBirth.HasValue ? student.DateOfBirth.Value.ToString("yyyy-MM-dd") : "N/A")</td>
+                    <td>@(classes.FirstOrDefault(c => c.Id == student.ClassId)?.ClassName ?? "N/A")</td>
+                    <td>@(countries.FirstOrDefault(c => c.Id == student.CountryId)?.Name ?? "N/A")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<h4>Add Student</h4>
+<EditForm Model="@newStudent" OnValidSubmit="HandleAddStudent">
+    <InputText @bind-Value="newStudent.Name" />
+    <InputDate @bind-Value="newStudent.DateOfBirth" />
+
+    <div class="form-group">
+        <label for="class">Class</label>
+        <InputSelect id="class" @bind-Value="newStudent.ClassId" class="form-control">
+            @foreach (var classEntity in classes)
+            {
+                <option value="@classEntity.Id.ToString()">@classEntity.ClassName</option>
+            }
+        </InputSelect>
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country</label>
+        <InputSelect id="country" @bind-Value="newStudent.CountryId" class="form-control">
+            @foreach (var country in countries)
+            {
+                <option value="@country.Id.ToString()">@country.Name</option>
+            }
+        </InputSelect>
+    </div>
+
+    <button type="submit">Add</button>
+</EditForm>
+
+@code {
+    private List<Student> students;
+    private List<Class> classes;
+    private List<Country> countries;
+    private Student newStudent = new Student();
+
+    protected override async Task OnInitializedAsync()
+    {
+        students = await StudentService.GetAllStudentsAsync();
+        classes = await ClassService.GetAllClassesAsync();
+        countries = await CountryService.GetAllCountriesAsync();
+    }
+
+    private async Task HandleAddStudent()
+    {
+        await StudentService.AddStudent(newStudent);
+        newStudent = new Student(); // Reset the form
+        students = await StudentService.GetAllStudentsAsync(); // Reload the list
+    }
+}

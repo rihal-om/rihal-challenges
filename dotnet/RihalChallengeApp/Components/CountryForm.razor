@@ -1,0 +1,47 @@
+
+@using RihalChallengeApp.Models
+@using RihalChallengeApp.Services
+@* @page "/countries" *@
+@inject CountryService CountryService
+
+<EditForm Model="@country" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name">Country Name</label>
+        <InputText id="name" class="form-control" @bind-Value="country.Name" />
+        <ValidationMessage For="@(() => country.Name)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@if (submitSuccess)
+{
+    <div class="alert alert-success" role="alert">
+        Submit successful!
+    </div>
+}
+
+@code {
+    [Parameter] public Country country { get; set; } = new Country();
+    [Parameter] public EventCallback OnSuccess { get; set; }
+
+    private bool submitSuccess = false;
+
+    private async Task HandleSubmit()
+    {
+        if (country.Id == 0)
+        {
+            await CountryService.AddCountry(country);
+        }
+        else
+        {
+            await CountryService.UpdateCountry(country);
+        }
+
+        submitSuccess = true;
+        await OnSuccess.InvokeAsync(null);
+    }
+}

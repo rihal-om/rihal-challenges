@@ -1,0 +1,52 @@
+@using RihalChallengeApp.Models
+@using RihalChallengeApp.Services
+@page "/countries"
+@inject CountryService CountryService
+
+<h3>Countries</h3>
+
+@if (countries == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var country in countries)
+        {
+            <tr>
+                <td>@country.Name</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+<h4>Add Country</h4>
+<EditForm Model="@newCountry" OnValidSubmit="HandleAddCountry">
+    <InputText @bind-Value="newCountry.Name" />
+    <button type="submit">Add</button>
+</EditForm>
+
+@code {
+    private List<Country> countries;
+    private Country newCountry = new Country();
+
+    protected override async Task OnInitializedAsync()
+    {
+        countries = await CountryService.GetAllCountriesAsync();
+    }
+
+    private async Task HandleAddCountry()
+    {
+        await CountryService.AddCountry(newCountry);
+        newCountry = new Country(); // Reset the form
+        countries = await CountryService.GetAllCountriesAsync(); // Reload the list
+    }
+}

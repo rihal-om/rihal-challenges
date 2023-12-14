@@ -1,0 +1,45 @@
+@using RihalChallengeApp.Models
+@using RihalChallengeApp.Services
+@inject ClassService ClassService
+
+<EditForm Model="@classEntity" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="className">Class Name</label>
+        <InputText id="className" class="form-control" @bind-Value="classEntity.ClassName" />
+        <ValidationMessage For="@(() => classEntity.ClassName)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@if (submitSuccess)
+{
+    <div class="alert alert-success" role="alert">
+        Submit successful!
+    </div>
+}
+
+@code {
+    [Parameter] public Class classEntity { get; set; } = new Class();
+    [Parameter] public EventCallback OnSuccess { get; set; }
+
+    private bool submitSuccess = false;
+
+    private async Task HandleSubmit()
+    {
+        if (classEntity.Id == 0)
+        {
+            await ClassService.AddClass(classEntity);
+        }
+        else
+        {
+            await ClassService.UpdateClass(classEntity);
+        }
+
+        submitSuccess = true;
+        await OnSuccess.InvokeAsync(null);
+    }
+}

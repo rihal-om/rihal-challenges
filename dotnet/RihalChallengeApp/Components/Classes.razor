@@ -1,0 +1,52 @@
+@using RihalChallengeApp.Models
+@using RihalChallengeApp.Services
+@page "/classes"
+@inject ClassService ClassService
+
+<h3>Classes</h3>
+
+@if (classes == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Class Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var classEntity in classes)
+        {
+            <tr>
+                <td>@classEntity.ClassName</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+<h4>Add Class</h4>
+<EditForm Model="@newClass" OnValidSubmit="HandleAddClass">
+    <InputText @bind-Value="newClass.ClassName" />
+    <button type="submit">Add</button>
+</EditForm>
+
+@code {
+    private List<Class> classes;
+    private Class newClass = new Class();
+
+    protected override async Task OnInitializedAsync()
+    {
+        classes = await ClassService.GetAllClassesAsync();
+    }
+
+    private async Task HandleAddClass()
+    {
+        await ClassService.AddClass(newClass);
+        newClass = new Class(); // Reset the form
+        classes = await ClassService.GetAllClassesAsync(); // Reload the list
+    }
+}

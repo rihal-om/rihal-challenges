@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RihalChallengeApp
+build_property.RootNamespace = RihalChallengeApp
+build_property.ProjectDir = /mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp
+build_property._RazorSourceGeneratorDebug = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Components/Classes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9DbGFzc2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Components/ClassForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9DbGFzc0Zvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Components/Countries.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db3VudHJpZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Components/CountryForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db3VudHJ5Rm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Components/Statistics.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TdGF0aXN0aWNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Components/Students.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TdHVkZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Components/StudnetForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TdHVkbmV0Rm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

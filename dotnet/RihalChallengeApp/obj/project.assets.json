@@ -5397,19 +5397,19 @@
     ]
   },
   "packageFolders": {
-    "/home/ahmed/.nuget/packages/": {}
+    "C:\\Users\\ahmed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/RihalChallengeApp.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed\\Projects\\rihal-challenges\\dotnet\\RihalChallengeApp\\RihalChallengeApp.csproj",
       "projectName": "RihalChallengeApp",
-      "projectPath": "/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/RihalChallengeApp.csproj",
-      "packagesPath": "/home/ahmed/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/ahmed/Projects/rihal-challenges/dotnet/RihalChallengeApp/obj/",
+      "projectPath": "C:\\Users\\ahmed\\Projects\\rihal-challenges\\dotnet\\RihalChallengeApp\\RihalChallengeApp.csproj",
+      "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ahmed\\Projects\\rihal-challenges\\dotnet\\RihalChallengeApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ahmed/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -5479,7 +5479,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

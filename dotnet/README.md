@@ -20,14 +20,14 @@ Please build a simple web app with CRUD for the following tables:
 
 •	Average age of students
 
-# Mandatory Requirements
-•	App must be built using the latest version of .Net Blazor (Server-Side or WASM)
+# Junior Requirements
+•	App must be built using the latest version of .Net Blazor WASM
 
 •	Data must be stored in a SQLITE or other file/memory based database, not hosted (automatically created on app start-up)
 
 •	Upload code to GitHub for submission
 
-# Bonus Requirements
+# Associate Requirements
 •	Use a 3rd party UI library (Mudblazor, Antblazor, Radzen, or others)
 
 •	Graphical visuals/stats
@@ -36,11 +36,21 @@ Please build a simple web app with CRUD for the following tables:
 
 •	Generate random seed data on database creation
 
-•	Use PascalCase for entities’ properties and snake_case for database tables
+•	Use PascalCase for entities’ properties and snake_case for database table column names
 
 •	Automatically generate CreatedDate and ModifiedDate properties for all entities
 
-•	Run/Host the application and add URL to hosted version in submission
+•	Host the application and add URL to hosted version in submission
+
+# Senior Requirements
+
+•	Add user authentication using KeyCloak
+
+•	Automatically generate CreatedBy and ModifiedBy properties for all entities
+
+•	Use Generics at least once in your code
+
+•	Add form submission protection using CAPTCHA or similar
 
 # Submission
 Please send a link to your GitHub repo for this solution to interviewer

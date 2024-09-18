@@ -20,14 +20,14 @@ Please build a simple web app with CRUD for the following tables:
 
 •	Average age of students
 
-# Junior Requirements
+# Easy Mode
 •	App must be built using the latest version of .Net Blazor WASM
 
 •	Data must be stored in a SQLITE or other file/memory based database, not hosted (automatically created on app start-up)
 
 •	Upload code to GitHub for submission
 
-# Associate Requirements
+# Medium Mode
 •	Use a 3rd party UI library (Mudblazor, Antblazor, Radzen, or others)
 
 •	Graphical visuals/stats
@@ -42,7 +42,7 @@ Please build a simple web app with CRUD for the following tables:
 
 •	Host the application and add URL to hosted version in submission
 
-# Senior Requirements
+# Hard Mode
 
 •	Add user authentication using KeyCloak
 

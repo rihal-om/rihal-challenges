@@ -1,0 +1,19 @@
+{
+  "classes": [
+    { "id": 1, "class_name": "Math" },
+    { "id": 2, "class_name": "Science" }
+  ],
+  "countries": [
+    { "id": 1, "name": "USA" },
+    { "id": 2, "name": "Canada" }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "class_id": 1,
+      "country_id": 1,
+      "name": "John Doe",
+      "date_of_birth": "2000-01-01"
+    }
+  ]
+}
